@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/03 08:51:35 by dhuss             #+#    #+#             */
+/*   Updated: 2025/04/03 08:52:35 by dhuss            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef WHATEVER_HPP
 # define WHATEVER_HPP
 
@@ -12,7 +24,7 @@
 /* function					 									*/
 /* 	- T is a template variable/type parameter 					*/
 /* 	- place holder for a type that will be provided				*/
-/* 	- is determined based on how we call the funct. 			*/
+/* 	- is determined, based on how we call the funct. 			*/
 /*--------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------------*/
@@ -54,8 +66,5 @@ T max(const T a, const T b)
 	else
 		return b;
 }
-
-// can be called with any type of arg
-// 	needs to be the same and must support all comparion operators
 
 #endif

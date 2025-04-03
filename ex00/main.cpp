@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/03 08:51:25 by dhuss             #+#    #+#             */
+/*   Updated: 2025/04/03 08:51:27 by dhuss            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "whatever.hpp"
 
-int	main( void ) 
+int	main( void )
 {
 	std::cout << "\033[34m[----------Subject Tests----------]\033[37m" << std::endl;
 	std::cout << "\033[33m- Ints\033[37m" << std::endl;
@@ -45,7 +56,7 @@ int	main( void )
 	std::cout << "max( e, f ) = " << ::max( e, f ) << std::endl;
 
 	//		uncomment to see that functions won't work with different types
-	
+
 	// std::cout << "\033[34m[----------Error Tests----------]\033[37m" << std::endl;
 	// std::cout << "\033[33m- Different types: int and float\033[37m" << std::endl;
 	// std::cout << "\033[35m--> pre swap\033[37m" << std::endl;
@@ -59,5 +70,5 @@ int	main( void )
 	// std::cout << "min( g, h ) = " << ::min( g, h ) << std::endl;
 	// std::cout << "\033[35m--> max with float\033[37m" << std::endl;
 	// std::cout << "max( g, h ) = " << ::max( g, h ) << std::endl;
-	return 0; 
+	return 0;
 }
