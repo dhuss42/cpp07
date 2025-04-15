@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Array.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/15 10:22:43 by dhuss             #+#    #+#             */
+/*   Updated: 2025/04/15 10:22:52 by dhuss            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef ARRAY_HPP
 # define ARRAY_HPP
 
 #include <iostream>
 #include <exception>
 
-template <typename T> 
+template <typename T>
 class Array
 {
 	private:
