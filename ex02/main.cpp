@@ -6,7 +6,7 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 10:22:55 by dhuss             #+#    #+#             */
-/*   Updated: 2025/04/15 10:22:56 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/04/29 14:44:05 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,17 @@ int	main(void)
 		strArr.setElement("str", i);
 		std::cout << "string array at index " << i <<  ": " << strArr[i] << std::endl;
 	}
+
+	std::cout << "\n\033[33m- Const correctness test\033[37m" << std::endl;
+	const Array<int> constIntArray(3);
+
+	try {
+		std::cout << "constIntArray[0]: " << constIntArray[0] << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+
 	return (0);
 }

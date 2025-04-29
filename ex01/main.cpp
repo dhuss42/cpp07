@@ -6,7 +6,7 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 08:52:56 by dhuss             #+#    #+#             */
-/*   Updated: 2025/04/03 09:28:07 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/04/29 13:48:20 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	subOne(T &value)
 }
 
 template <typename T>
-void	print(T &value)
+void	print(const T &value)
 {
 	std::cout << value << " ";
 }
@@ -37,8 +37,6 @@ int	main()
 	std::cout << "\033[35m--> post subOne\033[37m" << std::endl;
 	iter(arr_int, len, print<int>);
 	std::cout << std::endl;
-	std::cout << "\033[35m--> pre subOne\033[37m" << std::endl;
-
 
 	std::cout << "\n\033[33m- Float Array\033[37m" << std::endl;
 	std::cout << "\033[35m--> pre subOne\033[37m" << std::endl;
@@ -50,5 +48,21 @@ int	main()
 	std::cout << "\033[35m--> post subOne\033[37m" << std::endl;
 	iter(arr_float, len, print<float>);
 	std::cout << std::endl;
-	std::cout << "\033[35m--> pre subOne\033[37m" << std::endl;
+
+	std::cout << "\n\033[33m- Nullptr array\033[37m" << std::endl;
+	int	*n = nullptr;
+	iter(n, 5, print<int>);
+
+	std::cout << "\n\033[33m- const Double array\033[37m" << std::endl;
+	const double double_arr[4] = {5.5, 32.3, -1, 0};
+	const std::size_t len2 = 4;
+	iter(double_arr, len2, print<double>);
+	std::cout << std::endl;
+
+	std::cout << "\n\033[33m- const Nullptr array\033[37m" << std::endl;
+	const double *d = nullptr;
+	iter(d, len2, print<double>);
+
+	const int arr[] = {1, 2, 3};
+	const int x = 3;
 }

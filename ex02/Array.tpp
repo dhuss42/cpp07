@@ -6,7 +6,7 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 10:22:48 by dhuss             #+#    #+#             */
-/*   Updated: 2025/04/15 10:22:50 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/04/29 14:41:15 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Array<T>::Array(unsigned int n) : _elements(new T[n]()), _size(n)
 /*	Copy constructor						*/
 /*------------------------------------------*/
 template <typename T>
-Array<T>::Array(const Array& src) : _elements(new T(src._size)), _size(src._size)
+Array<T>::Array(const Array& src) : _elements(new T[src._size]), _size(src._size)
 {
 	for (int i = 0; i < _size; i++)
 	{
@@ -47,6 +47,7 @@ Array<T>::Array(const Array& src) : _elements(new T(src._size)), _size(src._size
 template <typename T>
 Array<T>::~Array()
 {
+	delete[] _elements;
 }
 
 /*------------------------------------------*/
@@ -71,6 +72,17 @@ Array<T>& Array<T>::operator=(const Array& other)
 /*------------------------------------------*/
 template <typename T>
 T& Array<T>::operator[](const unsigned int index)
+{
+	if (index >= _size)
+		throw(std::out_of_range("Index out of range"));
+	return (_elements[index]);
+}
+
+/*------------------------------------------*/
+/* overloaded const subscript operator		*/
+/*------------------------------------------*/
+template <typename T>
+const T& Array<T>::operator[](const unsigned int index) const
 {
 	if (index >= _size)
 		throw (std::out_of_range("Index out of range"));
