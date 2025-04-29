@@ -6,7 +6,7 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 10:22:55 by dhuss             #+#    #+#             */
-/*   Updated: 2025/04/29 14:44:05 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/04/29 14:53:43 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	main(void)
 	Array<std::string> strArr(5);
 	std::cout << "The Array size is: " << strArr.size() << std::endl;
 	std::cout << "string array at index 4:" << strArr[4] << std::endl;
-	for (int i = 0; i < strArr.size(); i++)
+	for (size_t i = 0; i < strArr.size(); i++)
 	{
 		strArr.setElement("str", i);
 		std::cout << "string array at index " << i <<  ": " << strArr[i] << std::endl;
