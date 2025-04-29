@@ -6,7 +6,7 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 08:52:56 by dhuss             #+#    #+#             */
-/*   Updated: 2025/04/29 13:48:20 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/04/29 15:00:39 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ int	main()
 	std::cout << "\n\033[33m- Float Array\033[37m" << std::endl;
 	std::cout << "\033[35m--> pre subOne\033[37m" << std::endl;
 	float	arr_float[5] = {1.5, 2.34, 3.7, 4.09, 5.1234};
-	double len_d = 5;
 	iter(arr_float, len, print<float>);
 	std::cout << std::endl;
 	iter(arr_float, len, subOne<float>);
@@ -62,7 +61,4 @@ int	main()
 	std::cout << "\n\033[33m- const Nullptr array\033[37m" << std::endl;
 	const double *d = nullptr;
 	iter(d, len2, print<double>);
-
-	const int arr[] = {1, 2, 3};
-	const int x = 3;
 }
