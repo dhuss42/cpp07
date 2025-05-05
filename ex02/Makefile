@@ -11,7 +11,8 @@
 # **************************************************************************** #
 
 CC = c++
-CPPFILES = main.cpp
+CPPFILES = main.cpp\
+	TestClass.cpp
 OFILES = $(CPPFILES:.cpp=.o)
 FLAGS = -Wall -Werror -Wextra -std=c++17 -g
 NAME = ex02

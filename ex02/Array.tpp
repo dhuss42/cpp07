@@ -20,13 +20,15 @@ Array<T>::Array(void) : _elements(nullptr), _size(0)
 {
 }
 
-/*---------------------------------------*/
-/* constructor 							 */
-/* -> Creates an array of n elements	 */
-/* () is value-initialisation			 */
-/* -> calls the default constructor		 */
-/* 	for each element					 */
-/*---------------------------------------*/
+/*----------------------------------------------------------*/
+/* constructor 							 					*/
+/* -> Creates an array of n elements	 					*/
+/* () is value-initialisation			 					*/
+/* For class types 											*/
+/* -> calls the default constructor for each element		*/
+/* For builtin types										*/
+/* -> zero initialises the element							*/
+/*----------------------------------------------------------*/
 template <typename T>
 Array<T>::Array(unsigned int n) : _elements(new T[n]()), _size(n)
 {
@@ -61,7 +63,7 @@ Array<T>& Array<T>::operator=(const Array& other)
 		delete[] _elements;
 		_size = other._size;
 		_elements = new T[_size];
-		for (int i = 0; i < _size; i++)
+		for (size_t i = 0; i < _size; i++)
 			_elements[i] = other._elements[i];
 	}
 	return (*this);

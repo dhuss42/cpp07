@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "Array.hpp"
+#include "TestClass.hpp"
 
 int	main(void)
 {
@@ -73,5 +74,7 @@ int	main(void)
 		std::cerr << e.what() << std::endl;
 	}
 
+	std::cout << "\033[33m- Test with Class\033[37m" << std::endl;
+	Array<TestClass> test(3);
 	return (0);
 }
