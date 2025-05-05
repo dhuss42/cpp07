@@ -74,7 +74,13 @@ int	main(void)
 		std::cerr << e.what() << std::endl;
 	}
 
-	std::cout << "\033[33m- Test with Class\033[37m" << std::endl;
+	std::cout << "\n\033[33m- Test with Class\033[37m" << std::endl;
 	Array<TestClass> test(3);
+	std::cout << "The Array size is: ";
+	std::cout << test.size() << std::endl;
+	std::cout << "class at index 0 calling it's getNum: ";
+	std::cout << test[0].getNum() << "\n" << std::endl;
+
+	const Array<TestClass> testConst(3);
 	return (0);
 }

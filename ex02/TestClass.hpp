@@ -5,9 +5,12 @@
 
 class TestClass
 {
+	private:
+		int	_num;
 	public:
 		TestClass();
 		~TestClass();
+		int	getNum(void) const;
 };
 
 #endif
