@@ -6,7 +6,7 @@
 /*   By: dhuss <dhuss@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 10:22:43 by dhuss             #+#    #+#             */
-/*   Updated: 2025/04/29 14:41:25 by dhuss            ###   ########.fr       */
+/*   Updated: 2025/05/06 09:10:25 by dhuss            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ class Array
 		Array& operator=(const Array& other);
 		~Array(void);
 
-		T& operator[](unsigned int index);
-		const T& operator[](unsigned int index) const;
+		T& operator[](const unsigned int index);
+		const T& operator[](const unsigned int index) const;
 
 		unsigned int size(void) const;
 		void	setElement(const T& value, unsigned int index);
